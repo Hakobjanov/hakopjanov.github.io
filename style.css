@@ -8,4 +8,38 @@ body{
     font-family: 'Roboto', sans-serif;
 
     background-image: url(../images/patt.png);
+
+    
+}
+
+.header{
+    background-color: rgba(255, 255, 255, 0.5);
+    
+}
+
+.row{
+
+    width: 1170px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+.col-md-3,
+.col-md-6{
+    float: left;
+   
+}
+
+.row:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.col-md-3{
+    width: 25%;
+}
+
+.col-md-6{
+    width: 50%;
 }
