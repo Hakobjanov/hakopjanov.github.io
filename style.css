@@ -1,3 +1,5 @@
+/*сброс свойств тела*/
+
 * {
     padding: 0;
     margin: 0;
@@ -10,13 +12,15 @@ body {
     background-image: url(images/patt.png);
 }
 
+/*стили для хеддэра*/
+
 .header {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 25px 0;
 }
 
 .container {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -61,10 +65,6 @@ body {
     border-left: 1px solid #2c71b8;
 }
 
-/* .menu  a:hover{
-    color: #fff;
-} */
-
 .menu li a {
     color: inherit;
 }
@@ -73,11 +73,6 @@ body {
     background-color: #2c71b8;
     color: #fff;
 }
-
-/* .menu a:focus {
-    background-color: #2c71b8;
-    color: white;
-  }  */
 
 .menu>li:hover::after {
     content: "";
@@ -191,13 +186,38 @@ body {
     font-size: 13px;
 }
 
+/*SLIDER*/
+
+.slider {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.col-md-12 {
+    width: 100%;
+}
+
 .main {
-    margin: 100px 0;
+    margin: 0;
 }
 
 .col-md-9 {
     width: 75%;
     float: right;
+}
+
+/* STYLES FOR PROCUCT NAME/CURRENT NAME*/
+
+.product-list-sup {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 30px 0 25px;
+}
+
+.product-list-sup span {
+    text-decoration: underline;
 }
 
 .tablets {
@@ -209,6 +229,7 @@ body {
 
 .sort {
     position: relative;
+    top: 5px;
     width: 270px;
     float: right;
     font-size: 21px;
@@ -269,18 +290,16 @@ body {
     top: 22px;
     right: 14px;
 }
-/* .wrap{
-    height: 100%;
 
-} */
-.right {
+/* STYLES FOR FILTER, left-side bar*/
+
+.left {
     width: 270px;
     border-right: 1px solid #fff;
     background-color: rgba(255, 255, 255, 0.5);
-padding-bottom: 25px;
-position: relative;
-top: -100px;
-
+    padding-bottom: 25px;
+    position: relative;
+    top: 0px;
 }
 
 .filter {
@@ -302,7 +321,7 @@ top: -100px;
 }
 
 .checkbox-input {
-    -webkit-appearance: none;
+    -webkit-appearance: none; /*or display none*/
     position: absolute;
 }
 
@@ -334,6 +353,17 @@ top: -100px;
     font-weight: 300;
 }
 
+/* STYLES FOR PROCUCT LIST, right side */
+
+.right {
+    width: 75%;
+    float: left;
+}
+
+.col-md-4 {
+    width: 33.3%;
+    float: left;
+}
 
 .item {
     border: 1px solid #fff;
@@ -383,6 +413,7 @@ top: -100px;
 
 .zoom, .like {
     position: absolute;
+    
     right: 9px;
     display: block;
     border: 1px solid #2c71b8;
@@ -399,15 +430,18 @@ top: -100px;
 
 .zoom svg, .like svg {
     display: block;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-top: 4px;
     margin-left: 4px;
     fill: rgb(44, 113, 184);
 }
 
-.zoom:hover, .like:hover {
+.zoom:hover, .like:hover, .liked {
     background-color: #2c71b8;
 }
+
+
 
 .zoom:hover svg {
     fill: #fff;
@@ -425,7 +459,7 @@ top: -100px;
     fill: rgba(255, 255, 255, 0.01);
 }
 
-.like:hover svg {
+.like:hover svg, .liked svg{
     stroke: #fff;
     fill: rgb(44, 113, 184);
 }
@@ -535,4 +569,18 @@ top: -100px;
     background: url(images/698.png) no-repeat left center;
     height: 18px;
     width: 18px;
+}
+
+/* STYLES FOR FOOTER */
+
+.footer {
+    height: 100px;
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-text {
+    color: #2c71b8;
+    text-align: center;
+    line-height: 100px;
 }
